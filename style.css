@@ -15,7 +15,7 @@ body{
     font-size: 0.875rem;
     font-family: 'Raleway', sans-serif;
     color: var(--Pale-Blue);
-    background: url("/images/bg-mobile.png");
+    background: url("./images/bg-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -106,7 +106,7 @@ body{
 }
 @media only screen and (min-width: 980px) {
     body{
-        background: url(/images/bg-desktop.png);
+        background: url(./images/bg-desktop.png);
         background-repeat: no-repeat;
         background-size: max(68rem, 100vw) 50vh;
         background-position: bottom;
