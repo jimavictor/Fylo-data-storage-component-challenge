@@ -1,0 +1,160 @@
+:root{
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+    color: var(--Pale-Blue);
+    background: url("/images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-wrapper{
+    max-width: 290px;
+}
+.fylo{
+    background-color: var(--Dark-Blue);
+    padding: 2.4rem 0rem 2.5rem 2.5rem;
+    border-radius: 10px 90px 10px 10px;
+}
+.icon-container{
+    display: flex;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    padding: 9px;
+    height: 45px;
+    width: 45px;
+    border-radius: 9px;
+    margin-top: 1.4rem;
+    margin-right: 12px;
+}
+.storage{
+    background-color: var(--Dark-Blue);
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+.storage > .usage-info{
+    margin-bottom: 9px;
+    margin-left: 8px;
+}
+.current-bar-position{
+    display: flex;
+    justify-content: flex-end;
+    width: 180px;
+    height: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    z-index: 2;
+    position: relative;
+    top: -10px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+.ball{
+    background-color: var(--Pale-Blue);
+    border-radius: 50%;
+    height: 6px;
+    width: 7px;
+    margin-top: 1px;
+}
+.usage-stats{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+.progress-bar-container{
+    height: 10px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 20px;
+}
+.tooltip{
+    width: 145px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--Very-Dark-Blue);
+    padding: 10px 20px ;
+    position: relative;
+    left: 70px;
+    bottom: 20px;
+    background-color: white;
+    z-index: 3;
+}
+#colored-text{
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    font-size: 11px;
+}
+@media only screen and (min-width: 980px) {
+    body{
+        background: url(/images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: max(68rem, 100vw) 50vh;
+        background-position: bottom;
+        background-color: var(--Very-Dark-Blue);
+        overflow: hidden;
+    }
+    .content-wrapper{
+        display: flex;
+        max-width: 100vw;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-left: 10rem;
+    }
+    .storage{
+        margin-left: 30px;
+        padding-bottom: 2%;
+        min-width: 500px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .fylo{
+        min-width: 320px;
+        border-radius: 10px 100px 10px 10px;
+    }
+    .tooltip{
+        left: -170px;
+        top: -100px;
+        min-width: 145px;
+        border-radius: 10px 10px 0px 10px;
+    }
+    .current-bar-position{
+        width: 330px;
+    }
+    .progress-bar-container{
+        max-width: 500px;
+    }
+    .tooltip::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: 0px;
+        bottom: -20px;
+        border-left: 40px solid transparent;
+        border-right: -20px solid transparent;
+        border-top: 30px solid #ffffff;
+    }
+  }

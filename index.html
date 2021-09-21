@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Fylo data storage component</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="fylo">
+            <img src="/images/logo.svg" alt="logo">
+            <div class="icon-container">
+                <div class="image-container"><img id="icon-document" src="/images/icon-document.svg" alt="icon-document"></div>
+                <div class="image-container"><img id="icon-folder" src="/images/icon-folder.svg" alt="icon-folder"></div>
+                <div class="image-container"><img id="icon-upload" src="/images/icon-upload.svg" alt="icon-upload"></div>
+            </div>
+        </div>
+        <div class="storage">
+            <p class="usage-info">
+                You’ve used 815 GB of your storage
+            </p>
+            <div class="progress-bar">
+                <div class="progress-bar-container"></div>
+                <div class="current-bar-position">
+                    <div class="ball"></div>
+                </div>
+            </div>
+            <div class="usage-stats">
+                <p>0 GB</p>
+                <p>1000 GB</p>
+            </div>
+        </div>
+        <div class="tooltip">
+            <p>185 <span id="colored-text">GB Left</span></p>
+        </div>
+    </div>
+</body>
+</html>
